@@ -1,10 +1,11 @@
 import { Instagram } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
 import { auth } from "../api/firebaseConfig"; // Import the initialized auth
 
 export default function Example() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
@@ -16,6 +17,7 @@ export default function Example() {
         // Signed in
         const user = userCredential.user;
         console.log(user);
+        navigate("/home");
       })
       .catch((error) => {
         setError(error.message);

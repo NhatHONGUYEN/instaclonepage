@@ -1,6 +1,7 @@
 import LeftBar from "../components/LeftBar";
 import NavBar from "../components/NavBar";
 import Post from "../components/Post";
+import RightBar from "../components/RightBar";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <LeftBar />
       <NavBar />
       <Post />
+      <RightBar />
     </div>
   );
 }
