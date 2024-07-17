@@ -46,7 +46,7 @@ export default function EditPost() {
                 <div className=" h-16 w-16 shrink-0 rounded-full">
                   <img
                     className="rounded-full"
-                    src="../../public/nhatprofilinsta.jpg"
+                    src="../../nhatprofilinsta.jpg"
                     alt=""
                   />
                 </div>

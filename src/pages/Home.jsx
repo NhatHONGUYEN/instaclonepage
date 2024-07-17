@@ -5,7 +5,7 @@ import RightBar from "../components/RightBar";
 
 export default function Home() {
   return (
-    <div>
+    <div className="w-full h-full">
       <LeftBar />
       <NavBar />
       <Post />

@@ -6,10 +6,7 @@ export default function PreCard() {
       <div className="flex w-full flex-col gap-4">
         <div className="flex  items-center gap-4">
           <div className=" h-10 w-10 shrink-0 ring-primary ring-offset-base-100 rounded-full ring ring-offset-2">
-            <img
-              className="rounded-full"
-              src="../../public/nhatprofilinsta.jpg"
-            />
+            <img className="rounded-full" src="../../nhatprofilinsta.jpg" />
           </div>
           <div className="flex flex-col gap-1">
             <div className="flex text-sm font-semibold h-4 w-20">

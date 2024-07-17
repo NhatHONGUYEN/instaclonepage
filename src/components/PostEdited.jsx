@@ -11,7 +11,7 @@ export default function PostEdited() {
           <div className=" h-10 w-10 shrink-0 ring-primary ring-offset-base-100 rounded-full ring ring-offset-2">
             <img
               className="rounded-full"
-              src="../../public/nhatprofilinsta.jpg"
+              src="../../nhatprofilinsta.jpg"
             />
           </div>
           <div className="flex flex-col gap-1">
