@@ -6,10 +6,7 @@ import {
   TransitionChild,
 } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
+import { Link } from "react-router-dom";
 
 export default function LeftBar() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -55,9 +52,7 @@ export default function LeftBar() {
                   </div>
                 </div>
                 <nav className="flex flex-1 flex-col">
-                  <ul role="list" className="flex flex-1 flex-col gap-y-7">
-                    <li>salut</li>
-                  </ul>
+                  <ul role="list" className="flex flex-1 flex-col gap-y-7"></ul>
                 </nav>
               </div>
             </DialogPanel>
@@ -74,7 +69,10 @@ export default function LeftBar() {
             <nav className="flex flex-1 flex-col">
               <ul role="list" className="flex flex-1 flex-col gap-y-7">
                 <li>
-                  <button>salut</button>
+                  {" "}
+                  <Link to={"/createpost"} className="btn">
+                    Cree
+                  </Link>
                 </li>
               </ul>
             </nav>
