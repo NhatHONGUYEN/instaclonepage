@@ -22,7 +22,7 @@ export default function PreCard() {
             loop
             controls={false}
             className="object-cover w-full h-full"
-            src="../../public/Womanemptyfav.mp4"
+            src="/Womanemptyfav.mp4"
           ></video>
         </div>
       </div>
