@@ -1,5 +1,5 @@
 import { Instagram } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
 
@@ -7,6 +7,7 @@ export default function SignUp() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -16,6 +17,7 @@ export default function SignUp() {
         // Signed up
         const user = userCredential.user;
         console.log(user);
+        navigate("/createUserProfil");
       })
       .catch((error) => {
         setError(error.message);
