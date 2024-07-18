@@ -20,7 +20,7 @@ function App() {
       <Route path="/createpost" element={<CreatePost />} />
       <Route path="/editpost" element={<EditPost />} />
       <Route path="/createUserProfil" element={<CreateUserProfil />} />
-      <Route path="/userProfil" element={<UserProfil />} />
+      <Route path="/userProfil/:uid" element={<UserProfil />} />
     </Routes>
   );
 }

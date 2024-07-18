@@ -12,6 +12,7 @@ import { addDoc, collection, getFirestore } from "firebase/firestore";
 export default function CreateUserProfil() {
   const [userName, setUserName] = useState("");
   const [about, setAbout] = useState("");
+  const [imageUrl, setImageUrl] = useState(null);
   const [imageUpload, setImageUpload] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -23,7 +24,7 @@ export default function CreateUserProfil() {
   const handleImageChange = (e) => {
     if (e.target.files && e.target.files[0]) {
       setImageUpload(e.target.files[0]);
-      setImageUpload(URL.createObjectURL(e.target.files[0]));
+      setImageUrl(URL.createObjectURL(e.target.files[0]));
     }
   };
 
@@ -71,7 +72,11 @@ export default function CreateUserProfil() {
       console.log("Added document with ID: ", userDocRef.id);
 
       // Navigate to the home page
-      navigate("/userProfil");
+      navigate(`/userProfil/${userCredential.user.uid}`, {
+        state: {
+          photoURL: photoURL,
+        },
+      });
     } catch (error) {
       setError(error.message);
     }
@@ -180,6 +185,9 @@ export default function CreateUserProfil() {
                         type="file"
                         onChange={handleImageChange}
                       />
+                      {imageUrl && (
+                        <img src={imageUrl} alt="Uploaded preview" />
+                      )}
                     </label>
                     <p className="pl-1">or drag and drop</p>
                   </div>
